@@ -1,0 +1,57 @@
+.page-select{
+    width:100%;
+    display: flex;
+    align-items: center ;
+}
+/* Centering Classes */
+
+.full-width {
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vertical-center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Header Styles */
+
+.header {
+    height: 12%;
+    min-height: 120px;
+
+    margin-bottom: 25px;
+}
+
+/* Footer Styles */
+
+.footer {
+    height: 6%;
+    min-height: 100px;
+
+    margin-top: 25px;
+}
+
+.centered {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo {
+    max-width: 100%;
+    align-items: center;
+}
+
+/* Screen Width Intervals (Aligned with Bootstrap) */
+
+@media only screen and (min-width: 576px) {
+
+    .centered {
+        margin: 0;
+        text-align: unset;
+    }
+}
