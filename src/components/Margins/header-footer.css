@@ -6,8 +6,7 @@
 /* Centering Classes */
 
 .full-width {
-    width: 100%;
-
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -42,8 +41,15 @@
 }
 
 .logo {
-    max-width: 100%;
-    align-items: center;
+    max-width: 50%;
+    display: inline;
+    margin:auto;
+}
+
+.spacer{
+    max-width: 25%;
+    display: inline;
+    margin:auto;
 }
 
 /* Screen Width Intervals (Aligned with Bootstrap) */
