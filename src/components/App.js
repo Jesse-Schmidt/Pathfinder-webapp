@@ -7,7 +7,8 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedPage: "Basic Info"
+      selectedPage: 0,
+      pageList: ["Basic Info", "Equipment", "Combat"]
     }
     this.togglePages = this.togglePages.bind(this);
   }
@@ -15,14 +16,32 @@ export default class App extends Component {
   render(){
     return (
         <div className="App">
-          <Header togglePages={this.togglePages} selectedPage={this.state.selectedPage}/>
-          <Collapse isOpen={this.state.selectedPage=="BasicInfo"}></Collapse>
+          <div className="coolBorder">
+            <Header  togglePages={this.togglePages} selectedPage={this.state.selectedPage} pageList={this.state.pageList}/>
+          </div>
+          <div className="pageBody">
+              <p>this is where the permanent info goes.</p>
+              <p>IE name, class, health, xp</p>
+              <Collapse isOpen={this.state.selectedPage === 0}>
+                  <p>this is where the basic info goes</p>
+                  <p>IE ability scores, skills</p>
+              </Collapse>
+              <Collapse isOpen={this.state.selectedPage === 1}>
+                  <p>this is where the equipment info goes</p>
+                  <p>IE permanent equipment, potions, shopping screen</p>
+              </Collapse>
+              <Collapse isOpen={this.state.selectedPage === 2}>
+                  <p>this is where the combat screen goes</p>
+                  <p>IE weapons, combat abilities, ac</p>
+              </Collapse>
+          </div>
         </div>
     );
   }
 
   togglePages(newSelection){
     newSelection = newSelection.target.value;
+    console.log(newSelection);
     this.setState({selectedPage: newSelection});
   }
 }

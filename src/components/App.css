@@ -1,5 +1,6 @@
-
-
-.Image{
-  max-width: 100%;
+.coolBorder{
+  border-style:inset;
+  border-color:goldenrod;
+  border-width: 20px;
+  border-radius: 5px;
 }
