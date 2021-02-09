@@ -1,0 +1,1 @@
+(race VARCHAR(25) PRIMARY KEY, hp INT, size ENUM FOREIGN KEY, speed INT, boost1 ENUM, boost2 ENUM, flaw ENUM, bonusFeats TEXT) ENGINE=InnoDB;
