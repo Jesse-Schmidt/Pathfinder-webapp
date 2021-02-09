@@ -1,8 +1,12 @@
 import mariadb
 import sys
+import os
 
 def setUp(cursor):
-    pass
+    createTableString = "CREATE TABLE IF NOT EXISTS "
+    for file in os.listdir():
+        if os.path.isfile(file) and file[len(file)-3:] == "txt":
+            print (createTableString + file[0: len(file)-4])
 
 def backUp(cursor):
     pass
@@ -11,7 +15,7 @@ def main():
     # Connect to MariaDB Platform
     try:
         conn = mariadb.connect(
-            user="pathfinderDB",
+            user="PathfinderDB",
             password="Pathfinder",
             host="127.0.0.1",
             port=3306,
